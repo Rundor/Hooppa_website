@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet"> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    
+    <!-- Riyal Symbol:: use in html <p><span class="icon-saudi_riyal"></span>50.00</p>  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@emran-alhaddad/saudi-riyal-font/index.css">
+
+    
+    
+</head>
+<body>
+     <!-- Header Section -->
+     <header>
+      <div class="container">
+          <div class="navbar">
+              <nav>
+                  <ul>
+                      <li><a href="index.php">Home</a></li>
+                      <!--categories -->
+                      <li class="dropdown-cat"><a href="categories.html">Categories</a><ul class="dropdown-menu-cat">
+  <li><a href="dolls.php"><img src="assets/images/doll.png" width="25ex" style="margin-right:2ex;">Dolls</a></li>
+  <li><a href="legoSet.php"><img src="assets/images/Lego.png" width="25ex" style="margin-right:2ex;">Lego Sets</a></li>
+  <li><a href="remoteControlToys.php"><img src="assets/images/remotecontrol.png" width="25ex" style="margin-right:2ex;">Remote Control Toys</a></li>
+  <li><a href="electronics.php"><img src="assets/images/KidsElectronic.png" width="25ex" style="margin-right:2ex;">Kids electronics</a></li>
+  <li><a href="sportsEquipment.php"><img src="assets/images/sport.png" width="25ex" style="margin-right:2ex;">Sport equipment</a></li>
+  <li><a href="brainTeaser.php"><img src="assets/images/brainTeaser.png" width="25ex" style="margin-right:2ex;">Brain Teaser</a></li>
+  <li><a href="trainSets.php"><img src="assets/images/train.png" width="25ex" style="margin-right:2ex;">Train Sets</a></li>
+  <li><a href="plushToys.php"><img src="assets/images/plush-toy.png" width="25ex" style="margin-right:2ex;">Plush Toys</a></li>
+  <li><a href="outdoorToys.php"><img src="assets/images/outdoors.png" width="25ex" style="margin-right:2ex;">Outdoor Toys</a></li>
+           
+</ul>
+</li>
+
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="contactus.html">Contact Us</a></li>
+                  </ul>
+              </nav>
+              <div class="logo">
+                  <img src="assets/images/HOOPPA_label" alt="Logo"> 
+              </div> 
+              <nav style="position: relative; left: 70px;">
+                  <ul> 
+                     <li>
+            <a href="javascript:void(0);" id="cart-icon">
+              <img src="assets/images/cartIcon.png" alt="Cart" width="30px" height="30px" />
+            </a>
+          </li>
+                      <li><a href="LoginPage.html"><div>log in</div></a></li>
+                  </ul>
+              </nav>
+          </div>
+      </div>
+  </header>
+    
+    <!--END OF PAGE HEADER-->
+    <!--MAIN-->
+    <main>
+
+<div class="container">
+                           <p><br></p>
+
+            <h1>ℹ️ About Us</h1>
+
+        <p><strong>Welcome to Hoopa – Where Fun Begins!</strong></p>
+
+<p>At Hoopa, we believe in the magic of childhood!</p>
+
+<p>Our store is a vibrant world of:</p>
+<ul>
+  <li>Toys</li>
+  <li>Games</li>
+  <li>Gifts</li>
+</ul>
+<p>– all specially handpicked to spark imagination, creativity, and endless smiles.</p>
+
+<p>Whether you're searching for:</p>
+<ul>
+  <li>Action figures</li>
+  <li>Cuddly plushies</li>
+  <li>Educational sets</li>
+  <li>Outdoor adventures</li>
+</ul>
+<p>– Hoopa has something for every curious mind and playful heart.</p>
+
+<p>With colorful shelves full of surprises and quality you can trust, <strong>Hoopa is your go-to destination</strong> for all things kids love.</p>
+
+<p>Because at Hoopa, it's not just shopping — it's a journey of joy, discovery, and unforgettable memories.</p>
+
+<p><strong>Let the fun begin – only at Hoopa!</strong></p>
+
+
+
+</div>                         <p><br></p>
+
+    </main>
+    <!--END OF MAIN-->
+    
+<!-- Side Cart -->
+  <div id="side-cart">
+    <div class="side-cart-header">
+      <h3>Shopping Cart</h3>
+      <button id="close-cart" class="close-cart">&times;</button>
+    </div>
+    <div id="cart-items">
+      <!-- Items will be dynamically added here -->
+    </div>
+    <div class="side-cart-footer">
+      <p>Total: <span id="cart-total">0</span> SAR</p>
+      <button class="btn checkout-btn" onclick="window.location.href='checkout.html'">Checkout</button>
+    </div>
+  </div>
+    
+    <!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <img src="assets/images/HOOPPA_label" alt="Hooppa logo">
+        <p class="copyright">&copy; 2025 HOOPPA. All rights reserved.</p>
+    </div>
+</footer>
+<!-- END OF PAGE Footer-->
+
+    <!-- Header Section -->
+    <script>
+    fetch('header.html?timestamp=' + new Date().getTime()) // Cache busting query parameter
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('header').innerHTML =html;
+  })
+  .catch(error => {
+    console.error('There was a problem loading the header:', error);
+    document.getElementById('header').textContent = 'Error loading header';
+  });
+  </script>
+    
+     <script>
+    
+       fetch('header.html')
+      .then(res => {
+        if (!res.ok) throw new Error('Header failed to load');
+        return res.text();
+      })
+      .then(html => {
+        document.getElementById('header').innerHTML = html;
+        attachHeaderEvents(); // Attach events after header is loaded
+      })
+      .catch(err => {
+        console.error('Header loading error:', err);
+      });
+    
+    const cartIcon = document.getElementById('cart-icon');
+    const closeCartBtn = document.getElementById('close-cart');
+    const sideCart = document.getElementById('side-cart');
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+
+    // Toggle side cart visibility
+    cartIcon.addEventListener('click', () => {
+      sideCart.classList.toggle('open');
+      renderSideCart();
+    });
+
+    closeCartBtn.addEventListener('click', () => {
+      sideCart.classList.remove('open');
+    });
+
+    const addToCartBtns = document.querySelectorAll('.add-to-cart');
+
+    addToCartBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const productName = btn.getAttribute('data-product');
+        const price = parseFloat(btn.getAttribute('data-price'));
+        addToCart(productName, price);
+      });
+    });
+
+    function addToCart(productName, price) {
+      const cartItemsArray = JSON.parse(localStorage.getItem('cartItems')) || [];
+      cartItemsArray.push({ product: productName, price });
+      localStorage.setItem('cartItems', JSON.stringify(cartItemsArray));
+      renderSideCart(); 
+    }
+
+    function renderSideCart() {
+      const cartItemsArray = JSON.parse(localStorage.getItem('cartItems')) || [];
+      cartItems.innerHTML = ''; 
+      let totalAmount = 0;
+      cartItemsArray.forEach(item => {
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.innerHTML = `<p>${item.product} - ${item.price} SAR</p>`;
+        cartItems.appendChild(cartItem);
+        totalAmount += item.price;
+      });
+      cartTotal.textContent = totalAmount.toFixed(2);
+    }
+
+    window.addEventListener('DOMContentLoaded', renderSideCart);
+
+    
+    // Image switching functionality
+    let currentImageIndex = 0;
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const images = document.querySelectorAll(".product-images img");
+      const totalImages = images.length;
+
+      function showImage(index) {
+        images.forEach((img, i) => {
+          img.classList.remove("active");
+          if (i === index) {
+            img.classList.add("active");
+          }
+        });
+      }
+
+      function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % totalImages;
+        showImage(currentImageIndex);
+      }
+
+      function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+        showImage(currentImageIndex);
+      }
+
+      // Initial display
+      showImage(currentImageIndex);
+
+      document.getElementById("next-button").addEventListener("click", nextImage);
+      document.getElementById("prev-button").addEventListener("click", prevImage);
+    });
+    // Function to add product to cart and redirect to checkout
+function buyNow(productName, price) {
+  // Add the product to the cart (localStorage)
+  const cartItemsArray = JSON.parse(localStorage.getItem('cartItems')) || [];
+  cartItemsArray.push({ product: productName, price });
+  localStorage.setItem('cartItems', JSON.stringify(cartItemsArray));
+
+  // Redirect to checkout page
+  window.location.href = 'checkout.html';
+}
+
+  </script>
+
+</body>
+
+
+
+
+     
+</html>

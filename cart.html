@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Cart - Hooppa</title>
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+        <!-- Riyal Symbol -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@emran-alhaddad/saudi-riyal-font/index.css">
+    </head>
+    <body>
+            <div id="header"></div>
+
+        
+        <main>
+            <!-- Static Cart Section -->
+            <div class="cart">
+                <h2>Your Cart</h2>
+                <div id="cart-items">
+                    <!-- Static Cart items -->
+                    <div class="cart-item">
+                        Barbie Dreamhouse Set - $130.00
+                    </div>
+                </div>
+                <p id="total">Total: $130.00</p>
+                <!-- Checkout Button -->
+                <a class="btn checkout" href="checkout.html">
+                    Proceed to Checkout
+                    </a>
+
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-container">
+                <img src="assets/images/HOOPPA_label" alt="Hooppa logo">
+                <p class="copyright">&copy; 2025 HOOPPA. All rights reserved.</p>
+            </div>
+        </footer>
+        
+         <!-- Header Section -->
+    <script>
+        fetch('header.html?timestamp=' + new Date().getTime()) // Cache busting query parameter
+        .then(response => response.text())
+        .then(html => {
+        document.getElementById('header').innerHTML =html;
+        })
+        .catch(error => {
+        console.error('There was a problem loading the header:', error);
+        document.getElementById('header').textContent = 'Error loading header';
+        });
+  </script>
+        
+    </body>
+</html>
